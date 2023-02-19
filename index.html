@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1>Anish Kumar</h1>
+                <ul>
+                    <li> <a href="#">Home</a> </li>
+                    <li> <a href="#">About</a> </li>
+                    <li> <a href="#">contact</a> </li>
+                    <li> <a href="#">Project</a> </li>
+                
+                </ul> 
+
+            </nav>
+
+        </div>
+        <div class="header-text">
+            <!-- <img src="photo_2023-02-07_23-54-05.jpg" class="responsive"> -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        </div>
+        <br>
+    </div>
+    <div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <!-- <img src="photo_2023-02-07_23-54-05.jpg" height="50%" width="40%"> -->
+                    </div>
+                    <div class="about-col-2">
+                        <h1>About me</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam modi, laudantium quasi ad
+                            delectus alias. Sit ipsam quia quaerat vel excepturi beatae ipsa nam natus hic voluptate
+                            voluptatum eligendi incidunt error reiciendis itaque doloribus, magnam iure sunt quo
+                            explicabo tempore, est facilis maxime. Ipsam suscipit dicta architecto quisquam inventore
+                            exercitationem?</p>
+                        <div class="tab">
+                            <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                        </div>
+                        <div class="tab-contents remove-div" id="Skills">
+                            <ul>
+                                <li>frontend developer</li>
+                                <li>c++</li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-contents remove-div" id="Experience">
+                            <ul>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents remove-div" id="Education">
+                            <ul>
+                                <li>B.tech from NIT JAMSHEDPUR</li>
+                                <li>10th and 12th from vivekanand mission school ,daudnagar , bihar</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <a href="photo_2023-02-07_23-54-05.jpg" download>Download CV</a>
+    <footer>
+        <div class="footer">
+            <a href="#">Design By Anish Kumar </a>
+            <a href="mailto:2021ugce003@nitjsr.ac.in">2021ugce003@nitjsr.ac.in</a>
+            <a href="#">contact us</a>
+        </div>
+    </footer>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        function opentab(tabname) {
+
+            console.log(tablinks[0])
+            for (let i = 0; i < tablinks.length; i++) {
+                if (event.currentTarget == tablinks[i]) {
+                    event.currentTarget.classList.add("active-link")
+                    tabcontents[i].classList.add("add-div")
+                    tabcontents[i].classList.add("remove-div")
+                } else {
+                    tablinks[i].classList.remove('active-link')
+                    tabcontents[i].classList.add("remove-div")
+                    tabcontents[i].classList.remove("add-div")
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
